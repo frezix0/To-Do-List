@@ -1,33 +1,90 @@
-# ToDo-List
+# To-Do List
 
-This template should help get you started developing with Vue 3 in Vite.
+A simple and stylish To-Do List application built with Vue.js and CSS. Organize your tasks, track your progress, and stay productive!
 
-## Recommended IDE Setup
+## Features
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- 📝 Add, edit, and delete tasks
+- ✅ Mark tasks as completed
+- 🎨 Clean and responsive user interface
+- 🗂️ Organize your daily or project tasks
+- 💾 Persistent storage (local storage or backend integration)
+- 🔍 Filter tasks (e.g., all, completed, active)
 
-## Type Support for `.vue` Imports in TS
+## Tech Stack
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+- **Frontend**: [Vue.js](https://vuejs.org/)
+- **Styling**: CSS
+- **TypeScript**: Used for type safety
+- **HTML**: Markup structure
 
-## Customize configuration
+## Getting Started
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+### Prerequisites
 
-## Project Setup
+- [Node.js](https://nodejs.org/) (v14.x or higher recommended)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 
-```sh
-npm install
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/frezix0/To-Do-List.git
+   cd To-Do-List
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+### Running the App
+
+```bash
+npm run serve
+# or
+yarn serve
 ```
 
-### Compile and Hot-Reload for Development
+Visit [http://localhost:8080](http://localhost:8080) to view the app in your browser.
 
-```sh
-npm run dev
-```
+### Building for Production
 
-### Type-Check, Compile and Minify for Production
-
-```sh
+```bash
 npm run build
+# or
+yarn build
 ```
+
+## Folder Structure
+
+```
+├── src/
+│   ├── assets/        # Images, icons, etc.
+│   ├── components/    # Vue components
+│   ├── views/         # View pages
+│   ├── App.vue        # Root component
+│   └── main.ts        # Application entry point
+├── public/
+├── package.json
+├── README.md
+```
+
+## Customization
+
+- Edit styles in the `src/assets` or component-specific CSS files.
+- Add new features or tweak existing ones by editing Vue components in `src/components/`.
+
+## Contributing
+
+Contributions are welcome! Feel free to open an issue or submit a pull request.
+
+## License
+
+MIT License
+
+---
+
+Made with ❤️ by [frezix0](https://github.com/frezix0)
