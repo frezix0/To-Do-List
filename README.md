@@ -1,33 +1,74 @@
-# ToDo-List
+# To-Do List
 
-This template should help get you started developing with Vue 3 in Vite.
+A simple and stylish To-Do List application built with [Vue.js](https://vuejs.org/). Manage your daily tasks with ease and keep track of what needs to be done!
 
-## Recommended IDE Setup
+## Features
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- ✅ Add, edit, and delete tasks
+- 📋 Mark tasks as complete or incomplete
+- 🌙 Clean and responsive user interface
+- 💾 Data persistence (tasks stay saved between visits)
+- 🔍 Filter and organize your tasks
 
-## Type Support for `.vue` Imports in TS
+## Tech Stack
+- ✅ **Vue.js**
+- ✅ **TailwindCSS**
+- ✅ **TypeScript**
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+## 🚀 Quick Start
 
-## Customize configuration
+### Prerequisites
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+- [Node.js](https://nodejs.org/) (version 14+ recommended)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 
-## Project Setup
+### 1. Clone Repository
 
-```sh
+```bash
+git clone https://github.com/frezix0/To-Do-List.git
+```
+
+### 2. Install Depedencies
+
+```bash
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### 3. Usage
 
-```sh
+```bash
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+Your app will be running at [http://localhost:5173](http://localhost:5173).
 
-```sh
-npm run build
+## Project Structure
+```
+src/
+├── components/
+│   ├── TodoForm.vue           # Form input todo
+│   ├── TodoList.vue           # List tampilan todos
+│   ├── TodoItem.vue           # Single todo item
+│   ├── Stats.vue              # Statistic cards
+│   ├── Calendar.vue           # Calendar view
+│   └── Sidebar.vue            # Sidebar navigation
+├── composables/
+│   ├── useTodoStorage.ts      # Logic localStorage & CRUD
+│   ├── useTodoFilter.ts       # Logic filtering todos
+│   ├── useCalendar.ts         # Logic kalender
+│   └── useDatetime.ts         # Real-time datetime
+├── types/
+│   └── todo.ts                # TypeScript interfaces
+├── utils/
+│   ├── dateUtils.ts           # Date formatting & utilities
+│   ├── storageUtils.ts        # Storage helper functions
+│   └── constants.ts           # Constants & enums
+├── styles/
+│   ├── main.css               # Global styles
+│   ├── components.css         # Component-specific styles
+│   ├── calendar.css           # Calendar styles
+│   └── responsive.css         # Responsive & media queries
+├── App.vue                    # Main app component
+├── main.ts                    # Entry point
+└── README.md                  # Project documentation
 ```

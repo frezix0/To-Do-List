@@ -1,0 +1,84 @@
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 20px;
+        border-right: none;
+        border-bottom: 1px solid #e9ecef;
+    }
+
+    .sidebar-datetime {
+        margin-bottom: 20px;
+    }
+
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .todo-input-container {
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .todo-input-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .add-todo-btn,
+    .cancel-btn {
+        width: 100%;
+    }
+
+    .todo-meta {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .todo-actions {
+        opacity: 1;
+    }
+
+    .calendar-day {
+        min-height: 80px;
+        padding: 5px;
+    }
+
+    .calendar-day-number {
+        font-size: 0.8em;
+    }
+
+    .calendar-todo-item {
+        font-size: 0.55em;
+        padding: 2px 4px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-header h1 {
+        font-size: 1.5em;
+    }
+
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+
+    .todo-filters {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .filter-tab {
+        font-size: 0.85em;
+        padding: 6px 12px;
+    }
+}

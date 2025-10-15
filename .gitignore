@@ -6,6 +6,7 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+pnpm-lock.yaml
 
 node_modules
 .DS_Store
@@ -13,9 +14,13 @@ dist
 dist-ssr
 coverage
 *.local
+/es
+/lib
+/test-results/
 
 /cypress/videos/
 /cypress/screenshots/
+.vscode/*.json
 
 # Editor directories and files
 .vscode/*
