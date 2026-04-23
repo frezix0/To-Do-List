@@ -1,7 +1,7 @@
 import { ref, computed, watch } from 'vue'
 import type { Todo, FilterType } from '@/types/todo'
 import { saveTodos, loadTodos, clearTodos, getStorageSize } from '@/utils/storageUtils'
-import { formatDate } from '@/utils/dateUtils'
+import { getTodayDateString } from '@/utils/dateUtils'
 
 export const useTodoStorage = () => {
     const todos = ref<Todo[]>([])
@@ -24,7 +24,7 @@ export const useTodoStorage = () => {
             id: Date.now(),
             completed: false,
             createdAt: new Date().toISOString(),
-            date: formatDate(new Date())
+            date: getTodayDateString()
         }
         todos.value.push(newTodo)
         return newTodo

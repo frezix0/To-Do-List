@@ -9,8 +9,8 @@
                 ></div>
                 <div class="todo-text">{{ todo.title }}</div>
                 <div class="todo-meta">
-                    <span class="priority-badge" :class="todo.priority">{{ capitalize(todo.priority) }}</span>
-                    <span class="difficult-badge" :class="todo.difficulty">{{ capitalize(todo.difficulty) }}</span>
+                    <span class="badge" :class="todo.priority">{{ capitalize(todo.priority) }}</span>
+                    <span class="badge" :class="todo.difficulty">{{ capitalize(todo.difficulty) }}</span>
                     <span v-if="todo.time">⏰ {{ todo.time }}</span>
                 </div>
                 <div class="todo-actions">

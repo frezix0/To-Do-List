@@ -4,7 +4,7 @@
       :current-view="currentView"
       @view-change="currentView = $event"
       @export="handleExport"
-      @clear-all="handleClearAll"
+      @clear-all="clearAll"
     />
 
     <main class="main-content">
@@ -49,9 +49,11 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted } from 'vue'
+import { ref, onMounted } from 'vue'
 import type { Todo, ViewType } from '@/types/todo'
 import { useTodoStorage } from '@/composables/useTodoStorage'
+import { useDataExport } from '@/composables/useDataExport'
+import { getTodayDateString } from '@/utils/dateUtils'
 
 // Components
 import Sidebar from '@/components/Sidebar.vue'
@@ -65,7 +67,6 @@ const currentView = ref<ViewType>('today')
 const isFormOpen = ref(false)
 const editingTodo = ref<Todo | null>(null)
 
-// Composables
 const {
   todos,
   currentFilter,
@@ -78,60 +79,35 @@ const {
   stats,
   filteredTodos
 } = useTodoStorage()
-
-// Initialize
-onMounted(() => {
-  initTodos()
-})
-
-// Form Handlers
+ 
+const { exportTodos } = useDataExport()
+ 
+onMounted(initTodos)
+ 
 const handleTodoSubmit = (formData: Omit<Todo, 'id' | 'createdAt' | 'date' | 'completed'>) => {
   if (editingTodo.value) {
-    // Update existing todo
     updateTodo(editingTodo.value.id, {
       ...formData,
-      date: new Date().toISOString().slice(0, 10)
+      date: getTodayDateString()
     })
     editingTodo.value = null
   } else {
-    // Add new todo
     addTodo(formData)
   }
   isFormOpen.value = false
 }
-
+ 
 const handleFormCancel = () => {
   isFormOpen.value = false
   editingTodo.value = null
 }
-
+ 
 const startEditTodo = (todo: Todo) => {
   editingTodo.value = todo
   isFormOpen.value = true
 }
-
-// Export Handler
-const handleExport = () => {
-  try {
-    const dataStr = JSON.stringify(todos.value, null, 2)
-    const dataBlob = new Blob([dataStr], { type: 'application/json' })
-    const url = URL.createObjectURL(dataBlob)
-    const link = document.createElement('a')
-    link.href = url
-    link.download = `todos-${new Date().toISOString().slice(0, 10)}.json`
-    link.click()
-    URL.revokeObjectURL(url)
-    alert('Data exported successfully!')
-  } catch (error) {
-    console.error('Error exporting todos:', error)
-    alert('Error exporting data. Please try again.')
-  }
-}
-
-// Clear All Handler
-const handleClearAll = () => {
-  clearAll()
-}
+ 
+const handleExport = () => exportTodos(todos.value)
 </script>
 
 <style scoped>

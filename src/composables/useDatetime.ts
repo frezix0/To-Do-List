@@ -1,9 +1,9 @@
 import { ref, onMounted, onBeforeUnmount } from 'vue'
-import { formatTime, formatDate } from '@/utils/dateUtils'
+import { formatTime, formatDate, getTodayDateString } from '@/utils/dateUtils'
 
 export const useDatetime = () => {
     const currentTime = ref(formatTime(new Date()))
-    const currentDate = ref(formatDate(new Date()))
+    const currentDate = ref(getTodayDateString())
     let intervalId: ReturnType<typeof setInterval> | null = null
 
     const updateTime = () => {

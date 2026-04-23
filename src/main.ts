@@ -1,7 +1,8 @@
-import '@/styles/calendar.css';
-import '@/styles/main.css';
-import '@/styles/components.css';
-import '@/styles/responsive.css';
+import '@/styles/variables.css'
+import '@/styles/main.css'
+import '@/styles/components.css'
+import '@/styles/calendar.css'
+import '@/styles/responsive.css'
 
 import { createApp } from 'vue'
 import App from './App.vue'

@@ -6,6 +6,8 @@ export const formatTime = (date: Date): string => {
     });
 };
 
+export const getTodayDateString = (): string => formatDate(new Date())
+
 export const formatDate = (date: Date): string => {
     return date.toISOString().slice(0, 10);
 }

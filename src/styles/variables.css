@@ -1,0 +1,64 @@
+:root {
+    --color-primary: #667eea;
+    --color-primary-dark: #764ba2;
+    --color-primary-hover: #5a6fd8;
+    --color-primary-hover-dark: #6a5acd;
+    --color-success: #2ecc71;
+    --color-success-dark: #27ae60;
+    --color-warning: #f39c12;
+    --color-warning-dark: #e67e22;
+    --color-accent: #9b59b6;
+    --color-accent-dark: #8e44ad;
+    --color-danger: #e74c3c;
+ 
+    --color-text: #333;
+    --color-text-muted: #666;
+    --color-text-faint: #999;
+    --color-text-disabled: #95a5a6;
+ 
+    --color-surface: #ffffff;
+    --color-surface-alt: #f8f9fa;
+    --color-surface-hover: #f1f3f4;
+    --color-border: #e9ecef;
+    --color-border-muted: #f0f0f0;
+    --color-bg: #f0f2f5;
+ 
+    --color-badge-high-bg: #ffebee;
+    --color-badge-high-fg: #c62828;
+    --color-badge-mid-bg: #fff3e0;
+    --color-badge-mid-fg: #ef6c00;
+    --color-badge-low-bg: #e8f5e8;
+    --color-badge-low-fg: #2e7d32;
+    --color-check: #4caf50;
+    --color-nav-danger: #dc3545;
+    --color-nav-danger-bg: #f8d7da;
+    --color-nav-danger-fg: #721c24;
+ 
+    --gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    --gradient-primary-reverse: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+    --gradient-primary-hover: linear-gradient(135deg, var(--color-primary-hover) 0%, var(--color-primary-hover-dark) 100%);
+    --gradient-success: linear-gradient(135deg, var(--color-success) 0%, var(--color-success-dark) 100%);
+    --gradient-warning: linear-gradient(135deg, var(--color-warning) 0%, var(--color-warning-dark) 100%);
+    --gradient-accent: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-dark) 100%);
+    --gradient-surface: linear-gradient(135deg, var(--color-surface-alt) 0%, var(--color-surface) 100%);
+ 
+    --radius-sm: 8px;
+    --radius-md: 10px;
+    --radius-lg: 12px;
+    --radius-xl: 15px;
+    --radius-2xl: 16px;
+    --radius-3xl: 20px;
+    --radius-pill: 999px;
+ 
+    --transition-fast: all 0.2s;
+    --transition-base: all 0.3s ease;
+ 
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 15px rgba(102, 126, 234, 0.3);
+    --shadow-lg: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --shadow-xl: 0 8px 25px rgba(0, 0, 0, 0.15);
+    --shadow-primary: 0 6px 20px rgba(102, 126, 234, 0.4);
+    --shadow-page: 0 20px 60px rgba(0, 0, 0, 0.1);
+    --shadow-focus: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    --shadow-focus-primary: 0 8px 30px rgba(102, 126, 234, 0.15);
+}
