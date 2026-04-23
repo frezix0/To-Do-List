@@ -1,7 +1,6 @@
 import { ref, computed } from 'vue'
 import type { Ref } from 'vue'
 import type { Todo } from '@/types/todo'
-import { MONTH_NAMES } from '@/utils/constants'
 
 export const useCalendar = (todos:Ref<Todo[]>) => {
     const currentMonth = ref(new Date().getMonth())
@@ -65,6 +64,5 @@ export const useCalendar = (todos:Ref<Todo[]>) => {
         previousMonth,
         nextMonth,
         calendarCells,
-        monthNames: MONTH_NAMES
     }
 }

@@ -6,7 +6,6 @@ import { formatDate } from '@/utils/dateUtils'
 export const useTodoStorage = () => {
     const todos = ref<Todo[]>([])
     const currentFilter = ref<FilterType>('all')
-    const editingId = ref<number | null>(null)
 
     // Load todos from localStorage on initialization
     const initTodos = () => {
@@ -80,7 +79,6 @@ export const useTodoStorage = () => {
     return {
         todos,
         currentFilter,
-        editingId,
         initTodos,
         addTodo,
         updateTodo,
